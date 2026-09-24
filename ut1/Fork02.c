@@ -16,9 +16,9 @@ void main (){
         printf("PABLO\n");
         
     }else{
-        pid_hijo= wait(NULL);
+         wait(NULL);
         printf("Mi pid es: pid=%d \n", getpid());
-        printf("Mi hijo tiene como pdi pid=%d\n",pid_hijo);
+        printf("Mi hijo tiene como pdi pid=%d\n",pid);
         
     }
 
