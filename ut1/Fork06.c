@@ -27,8 +27,6 @@ if(pid2==0){
         printf("Soy el proceso padre este es mi pid: %d \n", getpid());
     }
 
-
 }
-
 
 }
