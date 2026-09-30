@@ -16,20 +16,20 @@ exit(EXIT_FAILURE);
 if(pid==0){
     printf("soy p2 y mi pid es pid=%d y mi ppid es ppid=%d\n", getpid(), getppid() );
     sleep(3);
-     printf("Proceso P2 finalizado\n");
-        exit(0);
-}
-  pid2 = fork();
+    
+        
+}else{
+        pid2 = fork();
+        if(pid2==0){
+                sleep(1);
+                printf("Soy P3 Mi pid es: %d y mi ppid es %d \n",getpid(), getppid());
+        }else{
+                wait(NULL);
+                wait(NULL);
+                printf("Todos mis hijos han terminado, mi pid es: %d i el de mi padre es: %d\n", getpid(), getppid());
 
-    if(pid2==0){
-            printf("soy p3 y mi pid es pid=%d y mi ppid es ppid=%d\n", getpid(), getppid());
-            sleep(1);
-             printf("Proceso P3 finalizado\n");
-            exit(0);
-    }
-wait(NULL);
-wait(NULL);
-printf("Todos mis hijos han terminado\n");
+        }
+}
 
 exit(0);
 
