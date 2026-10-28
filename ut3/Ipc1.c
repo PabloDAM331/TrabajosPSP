@@ -15,7 +15,7 @@ void main(){
         ssize_t n;
         close(fd[1]);
         char buffer [100];
-        n=read(fd[0], buffer, sizeof(buffer)-1);
+        n=read(fd[0], &buffer, sizeof(buffer)-1);
         printf("Hijo a recibido %s\n", buffer);
         close(fd[0]);
 
